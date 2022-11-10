@@ -5,7 +5,7 @@
   border: 0;
   font-size: rem(15px);
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   min-height: $btn-height;
   text-shadow: none;
   -webkit-appearance: none;
@@ -59,7 +59,7 @@
 
   &.btn-secondary {
     color: $white; background-color: $secondary;
-    &:focus, &:hover, &:active:focus { background-color: transparentize($secondary, 0.2); border-color: transparentize($secondary, 0.2)}
+    &:focus, &:hover, &:active:focus { background-color: $black; border-color: $black; }
   }
 
   &.btn-outline-secondary {

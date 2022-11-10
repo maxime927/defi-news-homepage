@@ -2,31 +2,102 @@
 .page-home {
 
   .first-bloc {
+    margin-bottom: rem(64px);
+    @include min(md){ margin-bottom: rem(70px); }
+
     .flex-wrap {
-      @include min(md){ display: flex; }
+      @include min(md){ display: flex; justify-content: space-between; }
 
       .heading {
         margin-bottom: rem(62px);
+        @include min(md){ width: calc(((100% - 60px) / 3) * 2 + 30px); margin-bottom: 0; }
 
         figure {
-          padding: 0; margin: 0 0 rem(20px);
+          padding: 0; margin: 0 0 rem(25px);
+          @include min(md){ margin-bottom: rem(15px); }
 
           img { display: block; width: 100%; }
         }
-        h1 {
-          font-size: rem(42px); font-weight: 800; line-height: 40px; margin-bottom: rem(10px);
-          @include min(md){ font-size: rem(62px); line-height: 60px; }
-        }
-        p {
-          font-size: rem(15px); color: $dark-grey; line-height: rem(23px); margin-bottom: rem(20px);
+        .infos {
+          @include min(md){ display: flex; justify-content: space-between; }
 
+          h1 {
+            font-size: rem(41px); font-weight: 800; line-height: rem(40px); margin-bottom: rem(10px);
+            @include min(md){ font-size: rem(57px); line-height: rem(57px); width: calc((100% - 30px) / 2); margin-top: rem(20px); margin-bottom: 0; }
+          }
+          .text {
+            @include min(md){ width: calc((100% - 30px) / 2) }
+
+            p {
+              font-size: rem(15px); color: $dark-grey; line-height: rem(26px); margin-bottom: rem(23px);
+              @include min(md){ margin-bottom: rem(30px); }
+            }
+          }
         }
 
-        .btn { }
       }
 
-      .news-bloc {}
+      .news-bloc {
+        background-color: $midnight-blue; padding: rem(20px) rem(22px) rem(16px);
+        @include min(md){ width: calc((100% - 60px) / 3); padding: rem(26px) rem(24px) rem(16px); }
+
+        h2 {
+          color: $orange; font-weight: 700; margin-bottom: rem(0px); font-size: rem(31px);
+          @include min(md){ font-size: rem(40px); }
+        }
+
+        ul {
+          padding: 0; margin: 0; list-style: none;
+
+          li {
+            position: relative; padding: rem(27px) 0 rem(12px); border-top: 1px solid $dark-grey; margin-top: rem(18px);
+
+            &:first-child { margin-top: 0; border-top: none; }
+
+            a {
+              position: absolute; z-index: 2; left: 0; top: 20px; right: 0; bottom: 0;
+
+              &:hover + h3 { color: $orange; }
+            }
+            h3 { color: $white; font-weight: 800; font-size: rem(20px); margin-bottom: rem(8px); }
+            p {color:$grey; margin: 0 0; font-size: rem(15px); line-height: rem(26px);}
+          }
+        }
+      }
     }
 
+  }
+
+  // Second section
+  .second-news-bloc {
+    margin-bottom: rem(60px);
+
+    ul {
+      padding: 0; margin: 0; list-style: none; counter-reset: newsblock;
+      @include min(md){ display: flex; justify-content: space-between; }
+
+      li.card-news {
+        position: relative; counter-increment: newsblock; padding:0 0 0 rem(122px); margin-bottom: rem(32px); min-height: 130px;
+        @include min(md){ width: calc((100% - 60px) / 3) ; }
+
+        &::before {
+          display: block; content: '0' counter(newsblock); font-size: rem(32px); line-height: rem(30px); color: $grey; font-weight: 800; margin-bottom: rem(12px);
+          @include min(md){ margin-bottom: rem(14px); }
+        }
+
+        figure {
+          position: absolute; left: 0; top: 0; width: 100px; height: 130px; margin: 0;
+
+          img { display: block; width: 100%; }
+        }
+        a {
+          position: absolute; z-index: 2; left: 0; top: 20px; right: 0; bottom: 0;
+
+          &:hover + .card-title { color: $red; }
+        }
+        .card-title { margin-bottom: rem(7px); color: $black; font-size: rem(18px); font-weight: 800; }
+        p { margin: 0; color: $dark-grey; font-size: rem(15px); line-height: rem(26px);}
+      }
+    }
   }
 }
