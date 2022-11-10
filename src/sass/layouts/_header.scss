@@ -1,0 +1,34 @@
+/* ---- Header ---- */
+.header-wrap {
+  padding: rem(16px) 0; margin-bottom: rem(16px);
+
+  .container {
+    &::before,
+    &::after { content: ''; display: table; clear: both;}
+  }
+}
+
+// Header logo
+.header-logo { float: left; width: 40px; display: block;}
+
+// Header mobile burger button
+.btn-menu { position: relative; float:right; height: 18px; width: 39px;
+  @include min(md){ display: none; }
+}
+
+// Header Nav
+.header-nav {
+  float: left; margin: 0 0 0 rem(20px);
+  @include min(md){ display: block !important;}
+  @include max(sm){ display: none;}
+
+  ul {
+    margin-bottom: 0;
+    li {
+      a {
+        color: $text-color;
+        &:hover, &:focus { color: $primary; text-decoration: none;}
+      }
+    }
+  }
+}

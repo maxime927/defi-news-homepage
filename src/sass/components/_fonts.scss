@@ -1,0 +1,5 @@
+/*--- Fonts--- */
+// Raleway
+@include font-face(Inter, Regular, '../fonts/main/', 400, normal, woff2 woff ttf );
+@include font-face(Inter, Bold, '../fonts/main/', 700, normal, woff2 woff ttf );
+@include font-face(Inter, ExtraBold,'../fonts/main/', 800, normal, woff2 woff ttf);

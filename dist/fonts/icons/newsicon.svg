@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <font id="newsicon" horiz-adv-x="72.94117647058823">
+    <font-face font-family="newsicon"
+      units-per-em="31" ascent="31"
+      descent="0"
+      font-weight="1001" />
+    <missing-glyph horiz-adv-x="0" />
+    <glyph glyph-name="menu-close"
+      unicode="&#xE001;"
+      horiz-adv-x="32" d="M2.919 30.703L31.203 2.419L29.081 0.297L0.797 28.581zM0.797 2.419L29.081 30.703L31.203 28.581L2.919 0.297z" />
+    <glyph glyph-name="menu"
+      unicode="&#xE002;"
+      horiz-adv-x="72.94117647058823" d="M0 31H72.9411764705882V25.5294117647059H0zM0 18.2352941176471H72.9411764705882V12.7647058823529H0zM0 5.4705882352941H72.9411764705882V0H0zM0 31H72.9411764705882V25.5294117647059H0z" />
+  </font>
+</defs>
+</svg>
