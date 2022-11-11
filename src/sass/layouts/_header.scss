@@ -1,12 +1,18 @@
 /* ---- Header ---- */
 .header-wrap {
-  padding: rem(19px) 0; margin-bottom: rem(9px);
+  padding: rem(27px) 0 rem(17px); margin-bottom: rem(9px);
   @include min(md){ padding: rem(88px) 0 rem(30px); margin-bottom: rem(20px); }
 
   .container {
 
     &::before,
     &::after { content: ''; display: table; clear: both;}
+  }
+
+  &::before { content: ''; position: fixed; left: 0; top: 0; right: 0; bottom: 0; background-color: rgba($black,0); pointer-events: none; z-index: 2; transition: .3s background-color ease; transition-delay: .3s;  }
+
+  &.opened {
+    &::before { left: 0; top: 0; right: 0; bottom: 0; background-color: rgba($black,.7); pointer-events: auto; transition-delay: 0s; }
   }
 }
 
@@ -29,18 +35,28 @@
 
 // Header Nav
 .header-nav {
-  float: right; margin: 0 0 0 rem(20px); display: none;
-  @include min(md){ display: block !important;}
+  position: fixed; right: -255px; top: 0; bottom: 0; background-color: $white; padding-top: rem(145px); width: 255px; transition: .5s right ease; transition-delay: 0s; z-index: 3;
+  @include min(md){ display: block !important; position: relative; float: right; margin: 0 0 0 rem(20px); background-color: transparent; padding-top: 0; width: auto; right: auto; top: auto; bottom: auto; transition: none;}
+
+  &.opened { z-index: 3; right: 0; transition-delay: .2s;
+    @include min(md){ right: auto; }
+  }
+
+  .btn-menu {
+    position: absolute; top: 27px; right: 14px; height: 35px; width: 40px; color: $black;
+    @include min(md){ display: none; }
+    i { font-size: 30px; }
+  }
 
   ul {
-    margin-bottom: 0; margin: 0; padding: 0;
+    margin-bottom: 0; margin: 0; padding: 0; list-style: none;
 
-    li { display: inline-block;
-      @include min(md){ margin-left: rem(34px); }
+    li {
+      @include min(md){ display: inline-block; margin-left: rem(34px); }
 
       a {
-        color: $text-color; font-size: 16px;
-        @include min(md){ line-height: 45px;}
+        color: $midnight-blue; font-size: rem(18px); line-height:rem(40px); display: block; height: 40px; margin-bottom: rem(9px); margin-left: rem(23px); transition: .3s color ease;
+        @include min(md){ color: $text-color; font-size: rem(16px); line-height: 45px; height: auto; margin-bottom: 0; margin-left: 0;}
 
         &:hover, &:focus { color: $red; text-decoration: none;}
       }

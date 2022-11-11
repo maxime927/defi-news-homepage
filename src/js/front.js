@@ -57,13 +57,12 @@ $(document).ready(function () {
   // }
 
   // Menu
-  // let btnMenu = $('.btn-menu');
-  // btnMenu.click(function() {
-  //   $(this).toggleClass('clicked');
-  //   $('.header-wrap').toggleClass('active');
-  //   $('html, body').toggleClass('overflow');
-  //   $('.header-nav').slideToggle();
-  // });
+  let btnMenu = $('.btn-menu');
+  btnMenu.click(function() {
+    $('.header-wrap').toggleClass('opened');
+    $('html, body').toggleClass('overflow');
+    $('.header-nav').toggleClass('opened');
+  });
 
   // Input File Custom
   // $( '.form-file' ).each( function()

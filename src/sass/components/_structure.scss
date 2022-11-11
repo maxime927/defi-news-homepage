@@ -46,6 +46,7 @@ p {
 // Fix Google Map
 .google-map [aria-hidden] { display: block }
 
+.overflow { overflow: hidden; }
 .visually-hidden { position: absolute; opacity: 0; height: 0; width: 0; overflow: hidden;}
 
 .container { padding: 0 16px; max-width: 1142px; margin: 0 auto;

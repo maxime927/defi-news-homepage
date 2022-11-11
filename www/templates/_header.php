@@ -14,6 +14,9 @@
     <!-- Nav principale avec attributs WAI -->
     <?php if($menus->main): ?>
     <nav class="header-nav" role="navigation" aria-label="Navigation principale">
+        <button type="button" class="btn btn-link btn-menu">
+          <i class="icon-menu-close"></i><span class="visually-hidden">Fermer le menu</span>
+        </button>
         <ul class="list-inline" role="menubar">
           <?php $i = 0; foreach($menus->main->item as $m): ?>
           <li role="presentation" class="list-inline-item">
