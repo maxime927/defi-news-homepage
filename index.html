@@ -1,17 +1,11 @@
-<?php
-include 'www/functions.php';
-$data = grindXML('www/data.xml', true);
-$site = $settings->site;
-$is_responsive = (bool) (string) $site->isResponsive;
-?>
 <!doctype html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title><?=$site->title?></title>
+  <title>Mobile first News Homepage challenge</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="description" content="<?=$site->desc?>">
+  <meta name="description" content="First challenge on Frontend Mentor, about integration of a home page with my tools.">
   <!-- Styles -->
   <link rel="stylesheet" href="dist/css/main.min.css">
   <!-- Favicon -->
@@ -30,7 +24,45 @@ $is_responsive = (bool) (string) $site->isResponsive;
 <meta name="theme-color" content="#ffffff"></head>
 <body class="page-home">
   <!-- Header -->
-  <?php include 'www/templates/_header.php'; ?>
+  <header class="header-wrap" role="banner">
+    <div class="container">
+      <!-- Logo -->
+      <a href="/?page=home" class="header-logo">
+        <img src="/dist/img/logo.svg" alt="">
+        <span class="visually-hidden">Accueil</span>
+      </a>
+
+      <!-- Btn Menu -->
+      <button type="button" class="btn btn-link btn-menu">
+        <i class="icon-menu"></i><span class="visually-hidden">Menu</span>
+      </button>
+
+      <!-- Nav principale avec attributs WAI -->
+      <nav class="header-nav" role="navigation" aria-label="Navigation principale">
+          <button type="button" class="btn btn-link btn-menu">
+            <i class="icon-menu-close"></i><span class="visually-hidden">Fermer le menu</span>
+          </button>
+          <ul class="list-inline" role="menubar">
+            <li role="presentation" class="list-inline-item">
+              <a class="menu-item" id="main-nav-item-0" href="#">Home</a>
+            </li>
+            <li role="presentation" class="list-inline-item">
+              <a class="menu-item" id="main-nav-item-1" href="#">New</a>
+            </li>
+            <li role="presentation" class="list-inline-item">
+              <a class="menu-item" id="main-nav-item-2" href="#">Popular</a>
+            </li>
+            <li role="presentation" class="list-inline-item">
+              <a class="menu-item" id="main-nav-item-3" href="#">Trending</a>
+            </li>
+            <li role="presentation" class="list-inline-item">
+              <a class="menu-item" id="main-nav-item-4" href="#">Categories</a>
+            </li>
+          </ul>
+      </nav>
+    </div>
+  </header>
+
   <!-- Main -->
   <div class="home-wrap">
     <section class="first-bloc">
