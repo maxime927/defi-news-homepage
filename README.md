@@ -1,67 +1,52 @@
+# Frontend Mentor - News homepage solution
 
-# Front-End Development
+This is a solution to the [News homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Installation
-### Start the project (Front-End)
-**PROD:**
-```sh
-# install dependencies (yarn install --production && gulp --production)
-cd src && yarn run start:prod
-```
+## Table of contents
 
-**DEV:**
-```sh
-# install dependencies (yarn && gulp)
-cd src && yarn run start:dev
-```
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
 
-### SASS & JS
-**SASS:**
-```sh
-On folder: ./src/sass
-```
+## Overview
 
-**JS:**
-```sh
-On folder: ./src/js
-```
+### The challenge
 
-## Manual
-### Installing packages and dependencies
-### Add packages
+Users should be able to:
 
-```sh
-# install a package and add it to package.json
-yarn add <package> --dev
-```
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
+- **Bonus**: Toggle the mobile menu (requires some JavaScript)
 
-### Update packages
-[https://www.npmjs.com/package/npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
-```sh
-# overwrite package file (package.json)
-ncu -u
+### Screenshot
 
-#include even those dependencies whose latest version satisfies the declared semver dependency (package.json)
-ncu -a
-```
+![Mobile view](./mobile.png)
+![Mobile menu opened](./mobile-menu.png)
+![Desktop view](./desktop.png)
 
-## Development
-### Gulp
 
-```sh
-# run gulp default
-gulp
+### Links
 
-# run gulp watch
-gulp watch
-```
+- Solution URL: (https://github.com/maxime927/defi-news-homepage)
+- Live Site URL: (https://maxime927.github.io/defi-news-homepage/)
 
-## WEB BROWSER (Cross-browser)
-```sh
-- Chrome (80+)
-- Internet Explorer (10+)
-- Microsoft Edge (78+)
-- Firefox (70+)
-- Safari (12+) (Safari sur Windows est exclu car il n'est plus mis à jour depuis 2016)
-- Opera (60+)
-```
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Sass
+- Flexbox
+- Mobile-first workflow
+
+
+## Author
+
+- Website - Maxime ILAMBE
+- Frontend Mentor - [@maxime927](https://www.frontendmentor.io/profile/maxime927)
+
